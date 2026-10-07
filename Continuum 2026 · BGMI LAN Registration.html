@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Continuum 2026 · BGMI LAN Registration</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<style>
+:root{--stone:#8b8b8b;--dk:#2b1210;--ac:#ff8a1f;--ok:#55ff55;--no:#ff5555;--fg:#f3e6dc;--mut:#c9a99a;--line:#000;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{margin:0;min-height:100%;color:var(--fg);font:22px/1.3 'VT323','Courier New',monospace;background-color:#3b0b09;
+background-image:radial-gradient(ellipse at 50% 110%,#ff6a00 0,rgba(255,80,0,.35) 30%,transparent 65%),conic-gradient(#4a0f0b 25%,#3a0a08 0 50%,#4a0f0b 0 75%,#3a0a08 0);background-size:100% 100%,48px 48px;background-attachment:fixed}
+.px{font-family:'Press Start 2P','VT323',monospace}
+.stone{background:#8b8b8b conic-gradient(#9a9a9a 25%,#7c7c7c 0 50%,#9a9a9a 0 75%,#7c7c7c 0) 0 0/10px 10px}
+.hide{display:none!important}
+main{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+/* hero */
+#home{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px 16px;gap:6px}
+.pres{font-size:12px;color:#7dff7d;text-shadow:2px 2px 0 #000;margin:0 0 12px;letter-spacing:2px}
+.t1,.t3{font-family:'Press Start 2P',monospace;margin:0;line-height:1;background:#8b8b8b conic-gradient(#a4a4a4 25%,#777 0 50%,#a4a4a4 0 75%,#777 0) 0 0/12px 12px;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:2px #1a1a1a;filter:drop-shadow(0 6px 0 #111) drop-shadow(0 0 14px #ff4d00)}
+.t1{font-size:clamp(24px,8.2vw,62px)}.t3{font-size:clamp(46px,17vw,128px)}
+.t2{font-family:'Press Start 2P',monospace;font-size:clamp(30px,10vw,72px);margin:14px 0;color:#ffb300;text-shadow:4px 4px 0 #8a2b00,0 0 22px #ff7a00;-webkit-text-stroke:2px #5a1c00}
+.lan{font-family:'Press Start 2P',monospace;font-size:clamp(12px,3.6vw,22px);color:#ffa31a;background:#1c1c1c;border:4px solid #ff8a1f;box-shadow:0 0 0 4px #000,0 0 22px #ff6a00;padding:12px 22px;margin-top:18px;text-shadow:2px 2px 0 #000}
+.meta{margin-top:22px;font-size:26px;color:var(--mut);text-shadow:2px 2px 0 #000}
+.meta b{color:#fff}
+/* mc button */
+.btn{font-family:'Press Start 2P',monospace;font-size:14px;color:#fff;background:#6f6f6f;border:0;padding:16px 26px;cursor:pointer;text-shadow:2px 2px 0 #3a3a3a;box-shadow:inset -4px -4px 0 #404040,inset 4px 4px 0 #b4b4b4,0 0 0 4px #000;margin-top:14px}
+.btn:hover,.btn:focus-visible{background:#5a7d3a;box-shadow:inset -4px -4px 0 #34501f,inset 4px 4px 0 #9bd06a,0 0 0 4px #fff;outline:0}
+.btn:active{transform:translateY(2px)}.btn:disabled{opacity:.6}
+.btn.big{font-size:clamp(14px,4vw,20px);padding:20px 34px;margin-top:30px}
+.btn.s{font-size:10px;padding:10px 12px;margin:0}
+/* panels */
+.panel{background:#2a1a14 conic-gradient(#33211a 25%,#2a1a14 0 50%,#33211a 0 75%,#2a1a14 0) 0 0/16px 16px;border:4px solid #000;box-shadow:inset 0 0 0 4px #6b4a36;padding:20px}
+h2{font-family:'Press Start 2P',monospace;font-size:14px;margin:0 0 6px;color:var(--ac);text-shadow:2px 2px 0 #000}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:8px}
+.tabs{display:flex;gap:10px}.tabs .btn{margin:0}.tabs .on{background:#5a7d3a}
+label{display:block;color:var(--mut);margin:12px 0 4px}
+input,select{width:100%;padding:8px 10px;border:3px solid #000;border-top-color:#222;background:#1a0f0b;color:#fff;font:inherit;box-shadow:inset 3px 3px 0 #000,inset -3px -3px 0 #4a3426;border-radius:0}
+input:focus,select:focus{outline:3px solid var(--ac);outline-offset:0}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:560px){.g{grid-template-columns:1fr}}
+.pl{border:3px solid #000;background:rgba(0,0,0,.28);padding:2px 12px 12px;margin-top:14px}
+.pl b{font-family:'Press Start 2P',monospace;font-size:10px;color:#7dff7d;display:block;margin-top:12px}
+.err{color:var(--no);margin-top:10px}
+.msg{padding:14px;border:3px solid #000;background:rgba(0,0,0,.35);margin-top:12px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}.bar input,.bar select{width:auto;flex:1;min-width:120px}
+.stats{display:flex;gap:18px;flex-wrap:wrap;color:var(--mut)}.stats b{color:#fff}
+.t{border:3px solid #000;margin-bottom:8px;background:rgba(0,0,0,.3)}
+.t summary{padding:10px 12px;cursor:pointer;display:flex;gap:10px;align-items:center;list-style:none}
+.t summary span:first-child{flex:1;color:#fff}
+.tag{font-size:18px;padding:0 8px;border:2px solid var(--mut)}.confirmed{color:var(--ok);border-color:var(--ok)}.rejected{color:var(--no);border-color:var(--no)}
+.det{padding:0 12px 12px;overflow-x:auto}.det table{border-collapse:collapse;width:100%;margin:8px 0}
+.det td,.det th{text-align:left;padding:2px 10px 2px 0;border-bottom:2px solid #000;white-space:nowrap}
+.act{display:flex;gap:8px;flex-wrap:wrap}
+</style></head><body>
+
+<section id="home">
+<p class="pres px">NEXSUS · MMMUT PRESENTS</p>
+<h1 class="t1">CONTINUUM</h1>
+<div class="t2">2026</div>
+<div class="t3">BGMI</div>
+<div class="lan">LAN EVENT</div>
+<div class="meta"><b>Squads of 4</b> · Build your team · Enter the Nether</div>
+<button class="btn big" id="go">▶ REGISTER NOW</button>
+</section>
+
+<main id="app" class="hide">
+<div class="top"><button class="btn s" id="back">◀ Home</button>
+<div class="tabs"><button class="btn s on" id="tr">Register</button><button class="btn s hide" id="ta">Manage</button></div></div>
+
+<section id="reg" class="panel">
+<h2>Team Registration</h2>
+<form id="f" onsubmit="return false">
+<div class="g"><div><label>Team name *</label><input id="tn" maxlength="30"></div>
+<div><label>College / Institute *</label><input id="co" maxlength="60"></div></div>
+<div class="g"><div><label>Captain phone (WhatsApp) *</label><input id="ph" type="tel" maxlength="15"></div>
+<div><label>Captain email *</label><input id="em" type="email"></div></div>
+<div id="pls"></div>
+<div id="e" class="err"></div>
+<button class="btn" id="sub">Register team</button>
+</form>
+<div id="ok" class="msg hide"></div>
+</section>
+
+<section id="adm" class="panel hide">
+<h2>Team Manager</h2>
+<div class="stats" id="st"></div>
+<div class="bar"><input id="q" placeholder="Search team, college, player…"><select id="fl"><option value="">All</option><option>pending</option><option>confirmed</option><option>rejected</option></select><button class="btn s" id="csv">Export CSV</button></div>
+<div id="list"></div>
+</section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const P=[];for(let i=1;i<=4;i++)P.push(`<div class="pl"><b>${i===1?"Player 1 · Captain":"Player "+i}</b><div class="g"><div><label>Name *</label><input id="n${i}" maxlength="40"></div><div><label>BGMI in-game name *</label><input id="g${i}" maxlength="30"></div><div><label>BGMI character ID *</label><input id="i${i}" inputmode="numeric" maxlength="14"></div></div></div>`);
+$("pls").innerHTML=P.join("");
+let db=null,teams=[];
+
+$("go").onclick=()=>{$("home").classList.add("hide");$("app").classList.remove("hide");scrollTo(0,0)};
+$("back").onclick=()=>{$("app").classList.add("hide");$("home").classList.remove("hide")};
+function tab(a){$("reg").classList.toggle("hide",a);$("adm").classList.toggle("hide",!a);$("tr").classList.toggle("on",!a);$("ta").classList.toggle("on",a)}
+$("tr").onclick=()=>tab(false);$("ta").onclick=()=>tab(true);
+
+$("sub").onclick=async()=>{
+  const v=id=>$(id).value.trim(),er=$("e");er.textContent="";
+  if(!db){er.textContent="Registration is unavailable right now. Please sign in and reload.";return}
+  const t={team:v("tn"),college:v("co"),phone:v("ph"),email:v("em"),players:[],status:"pending",at:Date.now()};
+  if(!t.team||!t.college||!t.phone||!t.email){er.textContent="Fill in all team details.";return}
+  if(!/^\+?\d{10,13}$/.test(t.phone.replace(/[\s-]/g,""))){er.textContent="Enter a valid phone number.";return}
+  if(!/^\S+@\S+\.\S+$/.test(t.email)){er.textContent="Enter a valid email.";return}
+  const ids=new Set();
+  for(let i=1;i<=4;i++){
+    const p={name:v("n"+i),ign:v("g"+i),id:v("i"+i)};
+    if(!p.name||!p.ign||!p.id){er.textContent="Fill in all details for Player "+i+".";return}
+    if(!/^\d{5,14}$/.test(p.id)){er.textContent="Player "+i+": character ID should be numeric.";return}
+    if(ids.has(p.id)){er.textContent="Duplicate character ID in your squad.";return}
+    ids.add(p.id);t.players.push(p)}
+  $("sub").disabled=true;
+  try{
+    const me=await (await claude.use("user")).id();
+    await db.collection("teams").doc(me).set(t);
+    $("f").classList.add("hide");$("ok").classList.remove("hide");
+    $("ok").innerHTML=`<b>You're in the queue, ${esc(t.team)}.</b><br>We'll confirm your slot on WhatsApp at ${esc(t.phone)}.`;
+  }catch(x){er.textContent="Could not save: "+(x.message||x.code);$("sub").disabled=false}
+};
+
+// ---- admin ----
+const STAT=["pending","confirmed","rejected"];
+function render(){
+  const q=$("q").value.toLowerCase(),fl=$("fl").value;
+  const c=s=>teams.filter(t=>t.status===s).length;
+  $("st").innerHTML=`<span><b>${teams.length}</b> total</span><span><b>${c("confirmed")}</b> confirmed</span><span><b>${c("pending")}</b> pending</span>`;
+  const dup=new Set(),seen={};teams.forEach(t=>t.players.forEach(p=>{if(seen[p.id])dup.add(p.id);seen[p.id]=1}));
+  const L=teams.filter(t=>(!fl||t.status===fl)&&(!q||JSON.stringify(t).toLowerCase().includes(q)));
+  $("list").innerHTML=L.length?L.map(t=>`<details class="t"><summary><span>${esc(t.team)}</span><span style="color:var(--mut)">${esc(t.college)}</span><span class="tag ${t.status}">${t.status}</span></summary><div class="det">
+  <div>${esc(t.phone)} · ${esc(t.email)} · ${new Date(t.at).toLocaleString()}</div>
+  <table><tr><th>Player</th><th>IGN</th><th>ID</th></tr>${t.players.map(p=>`<tr><td>${esc(p.name)}</td><td>${esc(p.ign)}</td><td>${esc(p.id)}${dup.has(p.id)?' <span class="err">! duplicate</span>':""}</td></tr>`).join("")}</table>
+  <div class="act">${STAT.filter(s=>s!==t.status).map(s=>`<button class="btn s" data-a="${s}" data-i="${t.id}">Mark ${s}</button>`).join("")}<button class="btn s" data-a="del" data-i="${t.id}">Delete</button></div></div></details>`).join(""):'<p class="sub">No teams yet.</p>';
+}
+$("q").oninput=render;$("fl").onchange=render;
+$("list").onclick=async e=>{
+  const b=e.target.closest("button");if(!b)return;
+  const d=db.collection("teams").doc(b.dataset.i);
+  try{if(b.dataset.a==="del"){if(confirm("Delete this team?"))await d.delete()}else await d.update({status:b.dataset.a})}catch(x){alert(x.message||x.code)}
+};
+$("csv").onclick=async()=>{
+  const dl=await claude.use("downloads");if(!dl){alert("Download unavailable here");return}
+  const r=[["Team","College","Phone","Email","Status",...[1,2,3,4].flatMap(i=>["P"+i+" Name","P"+i+" IGN","P"+i+" ID"])]];
+  teams.forEach(t=>r.push([t.team,t.college,t.phone,t.email,t.status,...t.players.flatMap(p=>[p.name,p.ign,p.id])]));
+  const data=r.map(a=>a.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(",")).join("\n");
+  try{await dl.save({filename:"continuum-teams.csv",data})}catch(_){}
+};
+
+(async()=>{
+  try{
+    db=await claude.use("db");
+    const user=await claude.use("user");
+    if(!db){$("e").textContent="Sign in to claude.ai to register.";return}
+    if(user&&user.canEdit()){
+      $("ta").classList.remove("hide");
+      db.collection("teams").onSnapshot(s=>{teams=s.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.at-a.at);render()});
+    }
+  }catch(_){}
+})();
+</script></body></html>
